@@ -1,0 +1,4 @@
+Wzorzec Strategia charakteryzuje się tworzeniem oddzielnych klas implementujących ten sam interfejs
+dla różnych przypadków działania tych samych metod.
+Zwykła implementacja interfejsu tyczy się mniejszej elastyczności i zawarcia logiki w jednej klasie oraz
+tworzeniu warunków dla różnych implementacji tych samych metod w tej samej klasie.
