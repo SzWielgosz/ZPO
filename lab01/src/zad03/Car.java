@@ -1,22 +1,20 @@
 package zad03;
 
 public class Car {
-    private int maxSpeed;
-    private int carName;
+    Speed speed;
+    Name name;
 
-    public int getMaxSpeed() {
-        return maxSpeed;
+    public Car(Speed speed, Name name) {
+        this.speed = speed;
+        this.name = name;
     }
 
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
+    void doShowCarSpeed(int carSpeed){
+        System.out.println(speed.getMaxSpeed(carSpeed));
     }
 
-    public int getCarName() {
-        return carName;
-    }
-
-    public void setCarName(int carName) {
-        this.carName = carName;
+    void doShowCarName(String carName){
+        System.out.println(name.getName(carName));
     }
 }
+

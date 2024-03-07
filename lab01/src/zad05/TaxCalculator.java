@@ -7,7 +7,11 @@ public class TaxCalculator {
         this.taxesType = taxesType;
     }
 
-    void doCountTaxes(){
-        this.taxesType.countTax();
+    public void setTaxesType(TaxesType taxesType) {
+        this.taxesType = taxesType;
+    }
+
+    double doCountTaxes(double price){
+        return this.taxesType.countTax(price);
     }
 }

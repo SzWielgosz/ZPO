@@ -1,22 +1,8 @@
 package zad03;
 
-public class CarSpeed
-{
-    public CarSpeed(Car car)
-    {
-        this.car = car;
+public class CarSpeed implements Speed{
+    @Override
+    public int getMaxSpeed(int speed) {
+        return speed;
     }
-
-    public int getMaxSpeed()
-    {
-        return car.getMaxSpeed();
-    }
-
-    public void showCarName()
-    {
-        System.out.println(car.getCarName());
-    }
-
-    private Car car;
 }
-

@@ -1,5 +1,5 @@
 package zad05;
 
 public interface TaxesType {
-    void countTax();
+    double countTax(double price);
 }

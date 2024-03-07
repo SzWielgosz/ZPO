@@ -2,11 +2,11 @@ package zad05;
 
 public class MainShopApp {
     public static void main(String[] args) {
-        GermanyTaxes germanyTaxes = new GermanyTaxes();
-        UKTaxes ukTaxes = new UKTaxes();
-        PolandTaxes polandTaxes = new PolandTaxes();
-
-        TaxCalculator taxCalculator = new TaxCalculator(polandTaxes);
-        taxCalculator.doCountTaxes();
+        TaxCalculator taxCalculator = new TaxCalculator(new GermanyTaxes());
+        System.out.println(taxCalculator.doCountTaxes(1000));
+        taxCalculator.setTaxesType(new PolandTaxes());
+        System.out.println(taxCalculator.doCountTaxes(1000));
+        taxCalculator.setTaxesType(new UKTaxes());
+        System.out.println(taxCalculator.doCountTaxes(1000));
     }
 }
