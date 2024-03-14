@@ -2,11 +2,11 @@ package zad02;
 
 public class User {
     private String name;
-    private String language;
+    Translation translation;
 
-    public User(String name, String language) {
+    public User(String name, Translation translation) {
         this.name = name;
-        this.language = language;
+        this.translation = translation;
     }
 
     public String getName() {
@@ -17,11 +17,11 @@ public class User {
         this.name = name;
     }
 
-    public String getLanguage() {
-        return language;
+    public Translation getTranslation() {
+        return translation;
     }
 
-    public void setLanguage(String language) {
-        this.language = language;
+    public void setTranslation(Translation translation) {
+        this.translation = translation;
     }
 }
