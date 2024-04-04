@@ -2,13 +2,19 @@ package zad04;
 
 import zad03.Pizza;
 
-public class Lanyard extends Product {
-    public Lanyard() {
-        description = "Lanyard";
+public class Lanyard extends ProductDecorator {
+
+    Product product;
+
+    public Lanyard(Product product) {
+        this.product = product;
     }
 
-    @Override
+    public String getDescription() {
+        return product.getDescription() + "Lanyard, ";
+    }
+
     public double cost() {
-        return 1;
+        return product.cost() + 8.0;
     }
 }

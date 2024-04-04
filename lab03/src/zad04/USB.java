@@ -1,13 +1,22 @@
 package zad04;
 
-public class USB extends Product{
+import zad03.Pizza;
+
+public class USB extends ProductDecorator{
+
+    Product product;
+
+    public USB(Product product) {
+        this.product = product;
+    }
+
     @Override
     public String getDescription() {
-        return "USB";
+        return product.getDescription() + "USB, ";
     }
 
     @Override
     public double cost() {
-        return 5;
+        return 5 + product.cost();
     }
 }

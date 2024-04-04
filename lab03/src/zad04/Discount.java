@@ -1,21 +1,21 @@
 package zad04;
 
-class Discount extends Product {
+public class Discount extends ProductDecorator {
+    private double discount = 10;
 
-    public double discountAmount;
+    Product product;
 
-    public Discount(double discountAmount) {
-        this.discountAmount = discountAmount;
+    public Discount(Product product) {
+        this.product = product;
     }
 
-    @Override
     public String getDescription() {
-       return "Discount";
+        return product.getDescription() + "discount: " + discount + " PLN";
     }
 
     @Override
     public double cost() {
-        return -discountAmount;
+        double totalPrice = product.cost() - discount;
+        return totalPrice < 0 ? 0 : totalPrice;
     }
-
 }
