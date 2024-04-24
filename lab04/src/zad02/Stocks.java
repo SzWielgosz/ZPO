@@ -4,23 +4,21 @@ import java.util.Random;
 
 public class Stocks implements Subject{
 
-    Random random = new Random();
-
-    ArrayList<Observer> companies = new ArrayList<>();
+    ArrayList<Observer> observers = new ArrayList<>();
     @Override
     public void registerObserver(Observer observer) {
-        companies.add(observer);
+        observers.add(observer);
     }
 
     @Override
     public void removeObserver(Observer observer) {
-        companies.remove(observer);
+        observers.remove(observer);
     }
 
     @Override
-    public void notifyObservers() {
-        for(Observer company: companies){
-            company.update(Math.round(random.nextDouble()* 101));
+    public void notifyObservers(String name, int price) {
+        for(Observer observer: observers){
+            observer.update(name, price);
         }
     }
 }

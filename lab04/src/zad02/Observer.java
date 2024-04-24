@@ -1,5 +1,5 @@
 package zad02;
 
 public interface Observer {
-    void update(double price);
+    void update(String name, double price);
 }

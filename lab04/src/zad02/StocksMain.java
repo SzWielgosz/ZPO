@@ -4,18 +4,12 @@ public class StocksMain {
     public static void main(String[] args) {
         Stocks stocks = new Stocks();
 
-        FirstCompany firstCompany = new FirstCompany("Amazon");
+        AmazonObserver amazonObserver = new AmazonObserver(stocks);
+        MicrosoftObserver microsoftObserver = new MicrosoftObserver(stocks);
+        GoogleObserver googleObserver = new GoogleObserver(stocks);
 
-        SecondCompany secondCompany = new SecondCompany("Microsoft");
-
-        ThirdCompany thirdCompany = new ThirdCompany("Google");
-
-        stocks.registerObserver(firstCompany);
-        stocks.registerObserver(secondCompany);
-        stocks.registerObserver(thirdCompany);
-
-        stocks.notifyObservers();
-
+        stocks.notifyObservers("Amazon", 73);
+        stocks.notifyObservers("Google", 31);
 
     }
 }

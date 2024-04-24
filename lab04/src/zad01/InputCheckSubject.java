@@ -19,13 +19,18 @@ public class InputCheckSubject implements Subject{
 
     @Override
     public void notifyObservers(int number) {
-        for(Observer observer: observers){
-            observer.update(number);
+        for(int i = 0; i < observers.size(); i++){
+            observers.get(i).update(number);
         }
     }
 
-    public int getNumber(){
-        System.out.println("Podaj liczbe:");
-        return scanner.nextInt();
+    public void getNumbers(){
+        int number;
+        while(true){
+            System.out.printf("Podaj liczbe:");
+            number = scanner.nextInt();
+            notifyObservers(number);
+        }
     }
+
 }
