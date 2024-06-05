@@ -1,0 +1,15 @@
+Wzorzec Fabryka dostarcza metodę, która tworzy obiekty, ale ukrywa szczegóły implementacyjne procesu tworzenia tych obiektów.
+Pozwala on na tworzenie obiektów różnych klas pochodnych poprzez zmianę parametrów lub logiki fabryki.
+Kod staje się bardziej czytelny i łatwiejszy do zarządzania, ponieważ logika tworzenia obiektów jest
+skoncentrowana w jednym miejscu.
+
+Zastosowania:
+
+-Fabryki są często używane do kontrolowania procesu tworzenia obiektów, co jest szczególnie
+przydatne w dużych systemach, gdzie zarządzanie zależnościami może być skomplikowane.
+
+-Fabryki abstrakcyjne są często używane w sytuacjach, gdzie istnieje potrzeba
+tworzenia grup powiązanych ze sobą obiektów, które muszą być ze sobą zgodne.
+
+-Stosowanie fabryk pozwala na ukrycie szczegółów implementacji
+tworzenia obiektów przed kodem klienta, co ułatwia modyfikację i utrzymanie kodu.

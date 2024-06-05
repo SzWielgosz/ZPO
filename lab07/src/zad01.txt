@@ -1,0 +1,14 @@
+Wzorzec Singleton zapewnia, że dana klasa będzie miała tylko jedną instancję w czasie działania programu.
+Udostępnia on także globalny punkt dostępu do tej jedynej instancji oraz kontroluje
+cykl życia swojej instancji, zwykle przez statyczną metodę dostępu.
+
+
+Zastosowania:
+
+- Singletony często zarządzają zasobami, które są kosztowne w tworzeniu lub mają ograniczoną dostępność, na przykład
+połączenie z bazą danych.
+
+- Systemy logowania często korzystają ze wzorca Singleton, aby zapewnić jedną globalną instancję loggera.
+Umożliwia to centralizację zarządzania logami i łatwe dostosowywanie sposobu zapisywania logów.
+
+- Singletony mogą być używane do implementacji buforów lub cache, które przechowują tymczasowe dane dostępne dla różnych części aplikacji.
